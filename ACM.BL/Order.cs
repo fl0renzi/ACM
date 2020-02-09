@@ -4,7 +4,7 @@ using Acme.Common;
 
 namespace ACM.BL
 {
-    public class Order : EntityBase
+    public class Order : EntityBase, ILoggable
     {
         public Order() : this(0)
         {
@@ -21,6 +21,11 @@ namespace ACM.BL
         public int OrderId { get; private set; }
         public List<OrderItem> OrderItems { get; set; }
         public int ShippingAddressId { get; set; }
+
+        public string Log()
+        {
+            throw new NotImplementedException();
+        }
 
         public override string ToString() =>
               $"{OrderDate.Value.Date} ({OrderId})";
