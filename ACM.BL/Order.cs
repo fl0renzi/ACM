@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Acme.Common;
 
 namespace ACM.BL
 {
@@ -14,7 +15,7 @@ namespace ACM.BL
             OrderId = orderId;
             OrderItems = new List<OrderItem>();
         }
-
+        
         public int CustomerId { get; set; }
         public DateTimeOffset? OrderDate { get; set; }
         public int OrderId { get; private set; }
